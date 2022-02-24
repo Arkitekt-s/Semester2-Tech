@@ -240,7 +240,8 @@ ls -Force
 pwd
 #59: if there are any directories in the folder then move inside any one of them
 #
-
+ls
+cd .\cousin\
 
 
 #60: open a file in the terminal and see the content
@@ -342,19 +343,19 @@ mkdir appreciate
 cd .\appreciate\
 #89: if there are any directories in the folder then move inside any one of them
 #
-
+cd
 #90: output hidden files
 #
 ls -Force
 #91: output the sizes of the files in the directory
 #
-
+ls
 #92: output hidden files
 #
 ls -Force
 #93: output the sizes of the files in the directory
 #
-
+ls
 
 #94: create a file called speculate.txt. Put the text 'panel abortion banish speculate panel' in it and copy it so there is also a stock.txt with same content
 #
@@ -417,14 +418,14 @@ cd ../
 cd ../
 #110: if there are any directories in the folder then move inside any one of them
 #
-
+cd ./
 #111: create a directory banish and move into the directory
 #
 mkdir banish
 cd .\banish\
 #112: output the sizes of the files in the directory
 #
-
+ls
 #113: echo 'stock advantage experienced regret correspondence' into the file
 #
 echo 'stock advantage experienced regret correspondence' > stock.txt
@@ -465,7 +466,7 @@ cd ../
 cd ../
 #124: output the sizes of the files in the directory
 #
-
+du -v
 #125: output the content of any file in the directory
 #
 cat support.txt
@@ -506,7 +507,7 @@ mkdir advice
 echo 'advantage' > advantage.txt
 #137: output the sizes of the files in the directory
 #
-
+du
 #138: create a file called cater.txt
 #
 echo 'cater' > cater.txt
@@ -518,7 +519,8 @@ whoami
 echo 'rain' > rain.txt
 #141: if there are any directories in the folder then move inside any one of them
 #
-
+ls
+cd .\rain\
 #142: create a file called recession.txt and rename it so that it's called banish.txt instead. Hint: This should be done in 2 commands
 #
 echo 'recession' > recession.txt
@@ -573,7 +575,8 @@ ls -Force
 ls
 #158: if there are any directories in the folder then move inside any one of them
 #
-
+ls
+cd .\pen\
 #159: output hidden files
 #
 ls -Force
@@ -595,7 +598,8 @@ echo 'identity terminal cater discover excuse' > ditch.txt
 cat ditch.txt
 #165: if there are any directories in the folder then move inside any one of them
 #
-
+ls
+cd .\ditch\
 #166: delete the last file you created
 #
 rm -r needle.txt
@@ -671,7 +675,7 @@ cat ditch.txt
 ls
 #188: if there are any directories in the folder then move inside any one of them
 #
-
+du -v
 # 189: create a file called surprise.txt and rename it so that it's called panel.txt instead. Hint: This should be done in 2 commands
 #
 echo 'surprise' > surprise.txt
@@ -688,7 +692,8 @@ cd ../../
 echo 'cater' > cater.txt
 #193: if there are any directories in the folder then move inside any one of them
 #
-
+ls
+cd .\cater\
 #194: delete the last folder you created
 #
 rm -r needle
@@ -713,10 +718,11 @@ rm -r abortion.txt
 rm -r cater.txt
 #201: output the sizes of the files in the directory
 #
+du -v
 
 #202: output the sizes of the files in the directory
 #
-
+du -v
 #203: output who the active user is
 #
 whoami
@@ -763,9 +769,11 @@ whoami
 cd ../
 #216: if there are any directories in the folder then move inside any one of them
 #
-
+ls
+cd .\cater\
 #217: output the sizes of the files in the directory
 #
+du -v
 
 #218: echo 'rain pen responsibility degree needle' into the file
 #
@@ -776,6 +784,7 @@ echo 'needle' > needle.txt
 mv needle.txt recommend.txt
 #220: output the sizes of the files in the directory
 #
+du -v
 
 #221: open a file in the terminal and see the content
 #
@@ -836,6 +845,7 @@ echo 'experienced' > experienced.txt
 cd ../
 #239: output the sizes of the files in the directory
 #
+du -v
 
 #240: delete the last file you created
 #
