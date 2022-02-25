@@ -30,19 +30,39 @@ select cTitle from tbook where nPublishingCompanyID = 32;
 select cName, cSurname from tauthor ;
 
 --11.Show the name and surname of all the authors with published books along with the lowest publishing year for their books.
-select cName, cSurname, min(nPublishingYear) as nPublishingYear from tauthor left join tbook on tauthor.nAuthorID = tbook.nBookID group by tauthor.nAuthorID;
+select tauthor.cName,tauthor.cSurname,min(nPublishingYear) as publisher from tauthor left join tauthorship t on tauthor.nAuthorID = t.nAuthorID
+inner join tbook t2 on t.nBookID = t2.nBookID group by cName,cSurname order by publisher ;
 
 --12.For each signature and loan date, show the title of the corresponding books and the name and surname of the member who had them loaned.
+select  t2.cTitle,t3.cName,t3.cSurname from tloan left join tmember t3 on tloan.cCPR=t3.cCPR
+    left join tbookcopy t on tloan.cSignature = t.cSignature
+left join tbook t2 on t.nBookID = t2.nBookID group by t2.cTitle,t3.cSurname,t3.cName;
+
 
 --13.Repeat exercises 9 to 12 using the modern JOIN notation.
 
+
+
 --14.Show all theme names along with the titles of their associated books. All themes must appear (even if there are no books for some particular themes). Sort by theme name.
+
+select t.nThemeID,cName , t2.cTitle from
+ttheme   LEFT join tbooktheme t on ttheme.nThemeID = t.nThemeID left join
+tbook t2 on t.nBookID = t2.nBookID order by ttheme.cName ASC;
 
 --15.Show the name and surname of all members who joined the library in 2013 along with the title of the books they took on loan during that same year. All members must be shown, even if they did not take any book on loan during 2013. Sort by member surname and name.
 
+select tmember.cName,tmember.cSurname, tmember.dNewMember,t3.cTitle  from tmember
+left join tloan t on tmember.cCPR = t.cCPR
+inner join tbookcopy t2 on t.cSignature = t2.cSignature inner join
+tbook join tbook t3 on t2.nBookID = t3.nBookID and tmember.dNewMember like '2013-%';
+
 --16.Show the name and surname of all authors along with their nationality or nationalities and the titles of their books. Every author must be shown, even though s/he has no registered books. Sort by author name and surname.
 
+
+
 --17.Show the title of those books which have had different editions published in both 1970 and 1989.
+
+
 
 --18.	Show the surname and name of all members who joined the library in December 2013 followed by the surname and name of those authors whose name is “William”.
 
