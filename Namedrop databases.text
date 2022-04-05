@@ -1,0 +1,15 @@
+List 6 relational databases.
+1-Microsoft SQL Server
+2-Oracle Database
+3-Amazon Relational Database Service (Amazon RDS)
+4-MySQL
+5-SAP HANA
+6-IBM Db2
+
+List at least 1 of each of the NoSQL categories.
+1-mongodb
+2-neo4j
+
+List 2 in-memory databases.
+H2 Database
+HSQLDB (HyperSQL Database)
